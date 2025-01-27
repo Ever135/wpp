@@ -90,11 +90,33 @@ Sub CopiarDatos2()
       ' Escribir la hora en la celda H51
     ws.Range("H125").Value = TimeValue("11:30")
     
-        ws.Range("H140").Value = TimeValue("07:00")
+    ws.Range("H140").Value = TimeValue("07:00")
     
       ' Escribir la hora en la celda H51
     ws.Range("H141").Value = TimeValue("13:00")
+
+    ' Establecer la hoja donde se escribirán los valores
+    Set ws = ThisWorkbook.Sheets("DIC.")
     
+    ' Escribir el texto "7:00" en las celdas H41 y H51
+    ws.Range("W16").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X16").Value = "FERIADO NO LABORABLE 06 DE DICIEMBRE COMPENSABLE"
+    
+    ws.Range("W22").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X22").Value = "FERIADO NO LABORABLE 09 DE DICIEMBRE COMPENSABLE"
+    
+    
+    ws.Range("W50").Value = "COMUNICADO"
+    ws.Range("X50").Value = "Jornada unica 07:00 a 11:30 horas"
+    ws.Range("W52").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X52").Value = "FERIADO NO LABORABLE 24 DE DICIEMBRE COMPENSABLE"
+  
+    ws.Range("W64").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X64").Value = "FERIADO NO LABORABLE 30 DE DICIEMBRE COMPENSABLE"
+  
+    ws.Range("W66").Value = "COMUNICADO"
+    ws.Range("X66").Value = "Jornada unica 07:00 a 13:00 horas"
+
     ' Mostrar mensaje
     MsgBox "Los datos se copiaron correctamente de '" & wsOrigen.Name & "' a '" & wsDestino.Name & "'.", vbInformation
 End Sub
