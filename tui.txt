@@ -1,0 +1,19 @@
+=SI(E16=E17;"NL"; SI((O(B16="DOM";C16=6;C16=9;C16=24;C16=30; Y(E17>E16;H16<(9/1440))));"ASISTIO"; "FALTO"))
+Public Sub genFal()
+
+
+
+    For i = 6 To 72
+   
+    
+    Range("M" & i & "").FormulaLocal = "=SI(F" & i & "<>"""";SI(O(B" & i & "=""lunes"";O(C" & i & "=6;C" & i & "=8;C" & i & "=10);Y(H" & i & ">=0;H" & i & "<(9/1440)));0;1);"""")"
+    Next i
+  
+  
+  
+    For i = 80 To 147
+   
+    
+        Range("M" & i & "").FormulaLocal = "=SI(F" & i & "<>"""";SI(O(B" & i & "=""lunes"";O(C" & i & "=6;C" & i & "=8;C" & i & "=10);Y(H" & i & ">=0;H" & i & "<(9/1440)));0;1);"""")"
+    Next i
+End Sub
