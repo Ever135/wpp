@@ -1,0 +1,296 @@
+Sub CopiarDatos2()
+    Dim wsOrigen As Worksheet
+    Dim wsDestino As Worksheet
+    Dim rangoCopiar As Range
+    Dim celdaDestino As Range
+    
+    ' Definir las hojas
+    Set wsOrigen = ThisWorkbook.Sheets("MAR.NOV.")
+    Set wsDestino = ThisWorkbook.Sheets("MAR.DIC")
+    
+    ' Definir el rango a copiar
+    Set rangoCopiar = wsOrigen.Range("H12:H63") ' Cambia este rango según tus datos
+    
+    ' Definir la celda donde se pegarán los datos en la hoja de destino
+    Set celdaDestino = wsDestino.Range("H8")
+    
+    ' Copiar y pegar valores
+    rangoCopiar.Copy
+    celdaDestino.PasteSpecial Paste:=xlPasteValues
+    
+    ' Ajustar columnas en la hoja destino
+    wsDestino.Columns("H").AutoFit
+    
+    
+     ' Definir el rango a copiar
+    Set rangoCopiar = wsOrigen.Range("H12:H13") ' Cambia este rango según tus datos
+    
+    ' Definir la celda donde se pegarán los datos en la hoja de destino
+    Set celdaDestino = wsDestino.Range("H64")
+    
+    ' Copiar y pegar valores
+    rangoCopiar.Copy
+    celdaDestino.PasteSpecial Paste:=xlPasteValues
+    
+    ' Ajustar columnas en la hoja destino
+    wsDestino.Columns("H").AutoFit
+    
+    
+    
+    
+    
+    Set rangoCopiar = wsOrigen.Range("H86:H137") ' Cambia este rango según tus datos
+    
+    ' Definir la celda donde se pegarán los datos en la hoja de destino
+    Set celdaDestino = wsDestino.Range("H82")
+    
+    ' Copiar y pegar valores
+    rangoCopiar.Copy
+    celdaDestino.PasteSpecial Paste:=xlPasteValues
+    
+    ' Ajustar columnas en la hoja destino
+    wsDestino.Columns("H").AutoFit
+    
+    
+    
+    
+    
+    
+     ' Definir el rango a copiar
+    Set rangoCopiar = wsOrigen.Range("H86:H87") ' Cambia este rango según tus datos
+    
+    ' Definir la celda donde se pegarán los datos en la hoja de destino
+    Set celdaDestino = wsDestino.Range("H138")
+    
+    ' Copiar y pegar valores
+    rangoCopiar.Copy
+    celdaDestino.PasteSpecial Paste:=xlPasteValues
+    
+    ' Ajustar columnas en la hoja destino
+    wsDestino.Columns("H").AutoFit
+    
+    
+        ' Establecer la hoja donde se escribirá la hora
+    Set ws = ThisWorkbook.Sheets("MAR.DIC")
+    
+    ' Escribir la hora en la celda H41
+    ws.Range("H50").Value = TimeValue("07:00")
+    
+      ' Escribir la hora en la celda H51
+    ws.Range("H51").Value = TimeValue("11:30")
+    
+        ws.Range("H66").Value = TimeValue("07:00")
+    
+      ' Escribir la hora en la celda H51
+    ws.Range("H67").Value = TimeValue("13:00")
+    
+       ' Escribir la hora en la celda H41
+    ws.Range("H124").Value = TimeValue("07:00")
+    
+      ' Escribir la hora en la celda H51
+    ws.Range("H125").Value = TimeValue("11:30")
+    
+    ws.Range("H140").Value = TimeValue("07:00")
+    
+      ' Escribir la hora en la celda H51
+    ws.Range("H141").Value = TimeValue("13:00")
+
+    ' Establecer la hoja donde se escribirán los valores
+    Set ws = ThisWorkbook.Sheets("DIC.")
+    
+    ' Escribir el texto "7:00" en las celdas H41 y H51
+    ws.Range("W16").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X16").Value = "FERIADO NO LABORABLE 06 DE DICIEMBRE COMPENSABLE"
+    
+    ws.Range("W22").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X22").Value = "FERIADO NO LABORABLE 09 DE DICIEMBRE COMPENSABLE"
+    
+    ws.Range("W36").Value = "INFORME 110-2024-TP(16/12/2024)"
+    ws.Range("X36").Value = "RELOJ DESCOMPUESTO 16/12/2024 - INGRESO"
+    
+
+    
+    ws.Range("W50").Value = "COMUNICADO"
+    ws.Range("X50").Value = "Jornada unica 07:00 a 11:30 horas"
+    ws.Range("W52").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X52").Value = "FERIADO NO LABORABLE 24 DE DICIEMBRE COMPENSABLE"
+  
+    ws.Range("W64").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X64").Value = "FERIADO NO LABORABLE 30 DE DICIEMBRE COMPENSABLE"
+  
+    ws.Range("W66").Value = "COMUNICADO"
+    ws.Range("X66").Value = "Jornada unica 07:00 a 13:00 horas"
+
+
+
+
+
+    ws.Range("W90").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X90").Value = "FERIADO NO LABORABLE 06 DE DICIEMBRE COMPENSABLE"
+    
+    ws.Range("W96").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X96").Value = "FERIADO NO LABORABLE 09 DE DICIEMBRE COMPENSABLE"
+    
+    ws.Range("W110").Value = "INFORME 110-2024-TP(16/12/2024)"
+    ws.Range("X110").Value = "RELOJ DESCOMPUESTO 16/12/2024 - INGRESO"
+    
+
+    
+    ws.Range("W124").Value = "COMUNICADO"
+    ws.Range("X124").Value = "Jornada unica 07:00 a 11:30 horas"
+    ws.Range("W126").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X126").Value = "FERIADO NO LABORABLE 24 DE DICIEMBRE COMPENSABLE"
+  
+    ws.Range("W138").Value = "DECRETO SUPREMO 011-2024"
+    ws.Range("X138").Value = "FERIADO NO LABORABLE 30 DE DICIEMBRE COMPENSABLE"
+  
+    ws.Range("W140").Value = "COMUNICADO"
+    ws.Range("X140").Value = "Jornada unica 07:00 a 13:00 horas"
+    ws.Range("I8:I73").ClearContents
+    ws.Range("I82:I147").ClearContents
+
+    ' Mostrar mensaje
+    MsgBox "Los datos se copiaron correctamente de '" & wsOrigen.Name & "' a '" & wsDestino.Name & "'.", vbInformation
+End Sub
+
+------------------------------------------------
+Public Sub genFal()
+    For i = 8 To 71
+        Range("M" & i & "").FormulaLocal = "=SI(E" & i & "=E" & i + 1 & ",0,(SI( (O(B" & i & "=""LUN"",C" & i & "=6,C" & i & "=9,C" & i & "=24,C" & i & "=25,C" & i & "=30,Y(F" & i + 1 & ">F" & i & ",H" & i & "<(9/1440)))),0,1)))"
+    Next i
+    
+    For i = 80 To 145
+        Range("M" & i & "").FormulaLocal = "=SI(E" & i & "=E" & i + 1 & ",0,(SI( (O(B" & i & "=""VIE"",C" & i & "=6,C" & i & "=9,C" & i & "=24,C" & i & "=25,C" & i & "=30,Y(F" & i + 1 & ">F" & i & ",H" & i & "<(9/1440)))),0,1)))"
+    Next i
+   
+    
+    
+    Dim celda As Range
+    
+    ' Definir el rango donde se quiere borrar la fórmula
+    For Each celda In Range("M8:M71")
+        ' Conservar el valor y borrar la fórmula
+        celda.Value = celda.Value
+    Next celda
+    
+    
+    
+    
+    ' Definir el rango donde se quiere borrar la fórmula
+    For Each celda In Range("M80:M145")
+        ' Conservar el valor y borrar la fórmula
+        celda.Value = celda.Value
+    Next celda
+    
+    MsgBox "SE REALIZO CORRECTAMENTE"
+    
+End Sub
+----------------------------------------------------------
+
+Public Sub genFal()
+    Dim ws As Worksheet
+    Dim celda As Range
+    Dim i As Long
+    
+    ' Establecer la referencia a la hoja "UNIV"
+    Set ws = ThisWorkbook.Sheets("DIC.")
+    
+    ' Rango M8:M71, establecer las fórmulas en las celdas
+    For i = 8 To 71
+        ws.Range("M" & i).FormulaLocal = "=SI(E" & i & "=E" & i + 1 & ",0,(SI( (O(B" & i & "=""LUN"",C" & i & "=6,C" & i & "=9,C" & i & "=24,C" & i & "=25,C" & i & "=30,Y(F" & i + 1 & ">F" & i & ",H" & i & "<(9/1440)))),0,1)))"
+    Next i
+    
+    ' Rango M80:M145, establecer las fórmulas en las celdas
+    For i = 80 To 145
+        ws.Range("M" & i).FormulaLocal = "=SI(E" & i & "=E" & i + 1 & ",0,(SI( (O(B" & i & "=""VIE"",C" & i & "=6,C" & i & "=9,C" & i & "=24,C" & i & "=25,C" & i & "=30,Y(F" & i + 1 & ">F" & i & ",H" & i & "<(9/1440)))),0,1)))"
+    Next i
+    
+    ' Borrar las fórmulas y conservar los valores en el rango M8:M71
+    For Each celda In ws.Range("M8:M71")
+        celda.Value = celda.Value
+    Next celda
+    
+    ' Borrar las fórmulas y conservar los valores en el rango M80:M145
+    For Each celda In ws.Range("M80:M145")
+        celda.Value = celda.Value
+    Next celda
+    
+    ' Mensaje de confirmación
+    MsgBox "SE REALIZÓ CORRECTAMENTE"
+End Sub
+
+
+
+
+----------------------------------
+dir "C:\Mis Archivos\*.xls*" /b > "C:\listado\lista.txt"
+
+
+
+
+
+----------------------------------------
+
+Public Sub genFal()
+    For i = 6 To 72
+        Range("M" & i & "").FormulaLocal = "=SI(E" & i & "=E" & i + 1 & ",0,(SI( (O(B" & i & "=""LUN"",C" & i & "=6,C" & i & "=9,C" & i & "=24,C" & i & "=25,C" & i & "=30,Y(F" & i + 1 & ">F" & i & ",H" & i & "<(9/1440)))),0,1)))"
+    Next i
+    
+    For i = 80 To 147
+        Range("M" & i & "").FormulaLocal = "=SI(E" & i & "=E" & i + 1 & ",0,(SI( (O(B" & i & "=""LUN"",C" & i & "=6,C" & i & "=9,C" & i & "=24,C" & i & "=25,C" & i & "=30,Y(F" & i + 1 & ">F" & i & ",H" & i & "<(9/1440)))),0,1)))"
+    Next i
+    
+    MsgBox "Los datos se copiaron"
+End Sub
+
+
+
+-------------------------------------
+
+=SI(E16=E17,"NL", (SI(O(B16="DOM",C16=6,C16=9,C16=24,C16=30,  Y(E17>E16,H16<(9/1440))))    ,"ASISTIO", "FALTO")))
+
+
+=SI(E8=E9,"NL",(SI(Y(F9>F8, (O(B8="LUN",C8=6,C8=9,C8=24,H8<(9/1440)) )  ),"ASISTIO","FALTO")))
+
+
+-VALE
+
+=SI(E6=E7,"NL",(SI( (O(B6="LUN",C6=6,C6=9,C6=24,Y(F7>F6,H6<(9/1440)))),"ASISTIO","FALTO")))
+=SI(E6=E7,"NL",(SI( (O(B6="LUN",C6=6,C6=9,C6=24,C6=25,C6=30,Y(F7>F6,H6<(9/1440)))),"ASISTIO","FALTO")))
+=SI(E70=E71,0,(SI( (O(B70="LUN",C70=6,C70=9,C70=24,C70=25,C70=30,Y(F71>F70,H70<(9/1440)))),0,1)))
+
+
+
+---
+=SI(E6=E7,0,(SI( (O(B6="LUN",C6=6,C6=9,C6=24,C6=25,C6=30,Y(F7>F6,H6<(9/1440)))),0,1)))
+--
+
+
+=SI(E16=E17,"NL",(SI(1=1      ,"ASISTIO","FALTO")))
+
+
+Public Sub genFal()
+
+
+
+    For i = 6 To 72
+   
+     
+  
+    
+    
+        Range("M" & i & "").FormulaLocal =  "=SI(E" & i & "=E" & i+1 & ",0,(SI( (O(B" & i & "=""LUN"",C" & i & "=6,C" & i & "=9,C" & i & "=24,C" & i & "=25,C" & i & "=30,Y(F" & i+1 & ">F" & i & ",H" & i & "<(9/1440)))),0,1)))"
+
+    Next i
+End Sub
+
+
+
+
+
+  For i = 80 To 147
+   
+    
+        Range("M" & i & "").FormulaLocal = "=SI(F" & i & "<>"""";SI(O(B" & i & "=""lunes"";O(C" & i & "=6;C" & i & "=8;C" & i & "=10);Y(H" & i & ">=0;H" & i & "<(9/1440)));0;1);"""")"
+    Next i
+End Sub
